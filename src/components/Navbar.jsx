@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -7,37 +7,57 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  }, []);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   return (
-    <div className='fixed w-full h-20 shadow-lg z-[100] bg-[#e0e6eb]'>
+    <div
+      className={
+        shadow
+          ? 'fixed w-full h-20 shadow-lg z-[100] bg-[#e0e6eb] ease-in duration-300'
+          : 'fixed w-full h-20 z-[100] bg-[#e0e6eb] ease-in duration-200'
+      }
+    >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-        <Image
-          src='/../public/assets/logoH2.png'
-          alt='logo'
-          width={50}
-          height={50}
-        />
+        <Link href='/#home' scroll={false}>
+          <Image
+            src='/../public/assets/logoH2.png'
+            alt='logo'
+            width={50}
+            height={50}
+          />
+        </Link>
         <div>
           <ul className='hidden md:flex'>
-            <Link href='/'>
+            <Link href='/#home' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
             </Link>
-            <Link href='/'>
+            <Link href='/#about' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
             </Link>
-            <Link href='/'>
+            <Link href='/#skills' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
             </Link>
-            <Link href='/'>
+            <Link href='/#projects' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b'>
                 Project
               </li>
             </Link>
-            <Link href='/'>
+            <Link href='/#contact' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b'>
                 Contact
               </li>
@@ -63,12 +83,14 @@ export default function Navbar() {
         >
           <div>
             <div className='flex w-full items-center justify-between'>
-              <Image
-                src='/../public/assets/logoH2.png'
-                width={60}
-                height={35}
-                alt='logo'
-              />
+              <Link href='/#home' scroll={false}>
+                <Image
+                  src='/../public/assets/logoH2.png'
+                  width={60}
+                  height={35}
+                  alt='logo'
+                />
+              </Link>
               <div
                 onClick={handleNav}
                 className='rounded-full shadow-md p-3 cursor-pointer'
@@ -84,19 +106,19 @@ export default function Navbar() {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
-              <Link href='/'>
+              <Link href='/#home' scroll={false}>
                 <li className='py-4 text-sm'>Home</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#about' scroll={false}>
                 <li className='py-4 text-sm'>About</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#skills' scroll={false}>
                 <li className='py-4 text-sm'>Skills</li>
               </Link>
-              <Link href='/'>
-                <li className='py-4 text-sm'>Project</li>
+              <Link href='/#projects' scroll={false}>
+                <li className='py-4 text-sm'>Projects</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#contact' scroll={false}>
                 <li className='py-4 text-sm'>Contact</li>
               </Link>
             </ul>

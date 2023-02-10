@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Contact() {
   return (
-    <div className='w-full lg:h-screen'>
+    <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
         <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
           Contact
@@ -24,7 +24,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <h2 className='py-2'>Name here</h2>
+                <h2 className='py-2'>Hugh Grec</h2>
                 <p>Front-End Developer</p>
                 <p className='py-4'>
                   I am available for freelance or full-time positions. Contact
@@ -101,7 +101,7 @@ export default function Contact() {
           </div>
         </div>
         <div className='flex justify-center py-12'>
-          <Link href='/'>
+          <Link href='/#home' scroll={false}>
             <div className='rounded-full shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-500'>
               <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={30} />
             </div>
