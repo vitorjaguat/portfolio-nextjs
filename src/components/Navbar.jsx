@@ -5,7 +5,7 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
-export default function Navbar() {
+export default function Navbar({ navColor }) {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
 
@@ -28,8 +28,9 @@ export default function Navbar() {
     <div
       className={
         shadow
-          ? 'fixed w-full h-20 shadow-lg z-[100] bg-[#e0e6eb] ease-in duration-300'
-          : 'fixed w-full h-20 z-[100] bg-[#e0e6eb] ease-in duration-200'
+          ? 'fixed w-full h-20 shadow-lg z-[100] ease-in duration-300 ' +
+            navColor
+          : 'fixed w-full h-20 z-[100] ease-in duration-200 ' + navColor
       }
     >
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
@@ -44,21 +45,27 @@ export default function Navbar() {
         <div>
           <ul className='hidden md:flex'>
             <Link href='/#home' scroll={false}>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+              <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
+                Home
+              </li>
             </Link>
             <Link href='/#about' scroll={false}>
-              <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+              <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
+                About
+              </li>
             </Link>
             <Link href='/#skills' scroll={false}>
-              <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
+              <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
+                Skills
+              </li>
             </Link>
             <Link href='/#projects' scroll={false}>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
-                Project
+              <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
+                Projects
               </li>
             </Link>
             <Link href='/#contact' scroll={false}>
-              <li className='ml-10 text-sm uppercase hover:border-b'>
+              <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
                 Contact
               </li>
             </Link>
@@ -107,19 +114,29 @@ export default function Navbar() {
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
               <Link href='/#home' scroll={false}>
-                <li className='py-4 text-sm'>Home</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Home
+                </li>
               </Link>
               <Link href='/#about' scroll={false}>
-                <li className='py-4 text-sm'>About</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  About
+                </li>
               </Link>
               <Link href='/#skills' scroll={false}>
-                <li className='py-4 text-sm'>Skills</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Skills
+                </li>
               </Link>
               <Link href='/#projects' scroll={false}>
-                <li className='py-4 text-sm'>Projects</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Projects
+                </li>
               </Link>
               <Link href='/#contact' scroll={false}>
-                <li className='py-4 text-sm'>Contact</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Contact
+                </li>
               </Link>
             </ul>
             <div className='pt-40'>
