@@ -1,30 +1,29 @@
 import Link from 'next/link';
 import { useParallax } from 'react-scroll-parallax';
+import { useInView } from 'react-intersection-observer';
 
 export default function About() {
-  const imgParallax = useParallax({
-    translateX: [40, 0],
-    opacity: [0.5, 1],
-    // endScroll: 50,
-    // easing: 'easeOut',
-    rootMargin: {
-      top: 400,
-      right: 0,
-      bottom: -800,
-      left: 0,
-    },
-    shouldAlwaysCompleteAnimation: true,
-    onChange: (element) => {
-      console.log(element);
-      if (element.progress === 1) {
-        element.props = {};
-      }
-    },
-  });
+  // const imgParallax = useParallax({
+  //   translateX: [40, 0],
+  //   opacity: [0.5, 1],
+  //   // endScroll: 50,
+  //   // easing: 'easeOut',
+  //   rootMargin: {
+  //     top: 400,
+  //     right: 0,
+  //     bottom: -800,
+  //     left: 0,
+  //   },
+  //   shouldAlwaysCompleteAnimation: true,
+
+  // });
+
+  const { ref, inView, entry } = useInView({});
+
   return (
     <div id='about' className='w-full md:h-screen p-2 flex items-center py-20'>
-      <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
-        <div className='col-span-2'>
+      <div className='max-w-[1240px] m-auto md:grid grid-cols-5 gap-8'>
+        <div className='col-span-3'>
           <p className='uppercase text-xl tracking-widest text-primary'>
             About
           </p>
@@ -57,8 +56,13 @@ export default function About() {
           </Link>
         </div>
         <div
-          ref={imgParallax.ref}
-          className='w-full h-auto m-auto shadow-md shadow-gray-400 rounded-xl flex items-center justify-center p-1 hover:scale-105 ease-in duration-100'
+          ref={ref}
+          style={{
+            transform: inView ? 'none' : 'translateX(100%)',
+            backgroundColor: inView ? 'red' : 'blue',
+            transition: 'all 1s',
+          }}
+          className='col-span-2 w-full h-auto m-auto shadow-md shadow-gray-400 rounded-xl flex items-center justify-center p-1 hover:scale-105 ease-in duration-100'
         >
           <img
             className='rounded-xl'
