@@ -7,8 +7,8 @@ import Link from 'next/link';
 export default function Contact() {
   return (
     <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
+      <div className='max-w-[1240px] m-auto px-2 py-20 w-full'>
+        <p className='text-xl tracking-widest uppercase text-primary'>
           Contact
         </p>
         <h2 className='py-4'>Get In Touch</h2>
@@ -100,10 +100,10 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className='flex justify-center py-12'>
+        <div className='flex justify-center pb-5 mt-[200px]'>
           <Link href='/#home' scroll={false}>
             <div className='rounded-full shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-500'>
-              <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={30} />
+              <HiOutlineChevronDoubleUp className='text-primary' size={30} />
             </div>
           </Link>
         </div>

@@ -7,10 +7,15 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Home({ setNavColor }) {
+  useEffect(() => {
+    setNavColor('bg-[#e0e6eb]');
+  }, []);
+
   return (
     <>
       <Head>
