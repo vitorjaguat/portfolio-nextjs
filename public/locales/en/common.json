@@ -29,6 +29,9 @@
     "title": "projects",
     "subtitle": "What I've done"
   },
+  "project-item": {
+    "more": "More Info"
+  },
   "contact": {
     "title": "contact",
     "subtitle": "Get In Touch",

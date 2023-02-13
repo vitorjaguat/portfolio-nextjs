@@ -29,6 +29,9 @@
     "title": "projetos",
     "subtitle": "O que já fiz"
   },
+  "project-item": {
+    "more": "Saiba Mais"
+  },
   "contact": {
     "title": "contato",
     "subtitle": "Entre em contato",

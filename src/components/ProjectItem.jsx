@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 export default function ProjectItem({ title, backgroundImg, projectUrl }) {
+  const { t } = useTranslation('common');
+
   return (
     <div className='relative flex items-center justify-center h-auto w-full shadow-md shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#2a2a2a] to-[#7d7d7d]'>
       <Image
@@ -17,7 +20,7 @@ export default function ProjectItem({ title, backgroundImg, projectUrl }) {
         <p className='pb-4 pt-2 text-white text-center'>React JS</p>
         <Link href={projectUrl}>
           <p className='text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer'>
-            More Info
+            {t('project-item.more')}
           </p>
         </Link>
       </div>

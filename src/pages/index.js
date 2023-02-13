@@ -7,7 +7,6 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import { useEffect } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import nextI18nextConfig from 'next-i18next.config';
 
 export default function Home({ setNavColor }) {
   useEffect(() => {
