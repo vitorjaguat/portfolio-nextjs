@@ -21,7 +21,7 @@ export default function About() {
   const { ref, inView, entry } = useInView({});
 
   return (
-    <div id='about' className='w-full md:h-screen p-2 flex items-center py-20'>
+    <div id='about' className='w-full p-2 flex items-center py-20'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-5 gap-8'>
         <div className='col-span-3'>
           <p className='uppercase text-xl tracking-widest text-primary'>
