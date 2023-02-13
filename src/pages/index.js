@@ -1,15 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import Navbar from '@/components/Navbar';
 import Main from '@/components/Main';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import { useEffect } from 'react';
-
-const inter = Inter({ subsets: ['latin'] });
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import nextI18nextConfig from 'next-i18next.config';
 
 export default function Home({ setNavColor }) {
   useEffect(() => {
@@ -33,3 +31,28 @@ export default function Home({ setNavColor }) {
     </>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}
+
+// export async function getAllTranslationsServerSide(locale) {
+//   return serverSideTranslations(
+//     locale,
+//     ['common'],
+//     nextI18nextConfig,
+//     nextI18nextConfig.i18n.locales
+//   );
+// }
+
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await getAllTranslationsServerSide(locale)),
+//     },
+//   };
+// }

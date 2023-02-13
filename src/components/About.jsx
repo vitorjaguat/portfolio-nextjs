@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useParallax } from 'react-scroll-parallax';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'next-i18next';
 
 export default function About() {
   // const imgParallax = useParallax({
@@ -20,38 +21,22 @@ export default function About() {
 
   const { ref, inView, entry } = useInView({});
 
+  const { t } = useTranslation('common');
+
   return (
     <div id='about' className='w-full p-2 flex items-center py-20'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-5 gap-8'>
         <div className='col-span-3'>
           <p className='uppercase text-xl tracking-widest text-primary'>
-            About
+            {t('about.title')}
           </p>
-          <h2 className='py-4'>Who I Am</h2>
-          <p className='py-2 text-gray-600'>
-            // I am not your normal developer
-          </p>
-          <p className='py-2 text-gray-600'>
-            I specialize in building mobile responsive front-end UI applications
-            that connect with API’s and other backend technologies. I’m
-            passionate about learning new technologies and understand there is
-            more than one way to accomplish a task. Though I am most proficient
-            in building front-end applications using HTML, CSS, Javascript, and
-            React, I am a quick learner and can pick up new tech stacks as
-            needed. I believe that being a great developer is not using one
-            specific language, but choosing the best tool for the job.
-          </p>
-          <p className='py-2 text-gray-600'>
-            I started web developement in 2013 managing multiple e-commerce
-            websites on CMS platforms such as WordPress, BigCommerce, and
-            Shopify. I have experience working directly with clients and taking
-            mock wireframes all the way to deployed applications. In my spare
-            time I run Code Commerce, a Youtube channel where I teach web
-            developement and various front-end technologies.
-          </p>
+          <h2 className='py-4'>{t('about.subtitle')}</h2>
+          <p className='py-2 text-gray-600'>{t('about.small')}</p>
+          <p className='py-2 text-gray-600'>{t('about.p1')}</p>
+          <p className='py-2 text-gray-600'>{t('about.p2')}</p>
           <Link href='/#projects' scroll={false}>
             <p className='py-2 text-gray-600 underline cursor-pointer'>
-              Check out some of my latest projects.
+              {t('about.link')}
             </p>
           </Link>
         </div>

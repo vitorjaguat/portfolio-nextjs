@@ -2,9 +2,12 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { useParallax } from 'react-scroll-parallax';
+import { useTranslation } from 'next-i18next';
+import LanguageToggle from './LanguageToggle';
 
-export default function Main() {
+export default function Main(props) {
   const bgParallax = useParallax({ easing: 'easeIn', speed: 10 });
+  const { t } = useTranslation('common');
 
   return (
     <>
@@ -18,20 +21,19 @@ export default function Main() {
       >
         <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
           <div>
+            <LanguageToggle />
             <p className='uppercase text-sm tracking-widest text-gray-600'>
-              LET'S BUILD SOMETHING TOGETHER
+              {t('home.title')}
             </p>
             <h1 className='py-4 text-gray-700 text-5xl'>
-              Hi, I'm <span className='text-primary'>Hugh</span>
+              {t('home.hi')}
+              <span className='text-primary'>{t('home.name')}</span>
             </h1>
             <h1 className='py-2 text-gray-700 text-4xl'>
-              A Front-End Web Developer
+              {t('home.subtitle')}
             </h1>
             <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
-              I'm a front-end web-developer specializing in building (and also
-              designing) exceptional digital experiences. Currently, I'm focused
-              on building responsive front-end web-applications while learning
-              back-end technologies.
+              {t('home.text')}
             </p>
             <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
               <div className='rounded-full shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-500'>

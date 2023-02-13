@@ -3,13 +3,14 @@ import '@/styles/globals.css';
 import { useState, useEffect } from 'react';
 import { Nunito } from '@next/font/google';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { appWithTranslation } from 'next-i18next';
 
 const nunito = Nunito({
   subsets: ['latin'],
   // weight: ['400', '700'],
 });
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   const [navColor, setNavColor] = useState('bg-[#e0e6eb]');
   //instead of this, could also have called useRouter and router.asPath in the Navbar component, and handling this state inside of that same component
 
@@ -21,4 +22,6 @@ export default function App({ Component, pageProps }) {
       </main>
     </ParallaxProvider>
   );
-}
+};
+
+export default appWithTranslation(App);

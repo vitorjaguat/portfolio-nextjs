@@ -1,15 +1,19 @@
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'next-i18next';
 
 export default function Skills() {
   const { ref: ref1, inView: inView1 } = useInView();
   const { ref: ref2, inView: inView2 } = useInView();
+  const { t } = useTranslation('common');
 
   return (
     <div id='skills' className='w-full p-2 py-20'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-        <p className='text-xl tracking-widest uppercase text-primary'>Skills</p>
-        <h2 className='py-4'>What I Can Do</h2>
+        <p className='text-xl tracking-widest uppercase text-primary'>
+          {t('skills.title')}
+        </p>
+        <h2 className='py-4'>{t('skills.subtitle')}</h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {/* Can be refactored into a new component: */}
           <div

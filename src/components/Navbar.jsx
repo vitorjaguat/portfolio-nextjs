@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { useTranslation } from 'next-i18next';
 
 export default function Navbar({ navColor }) {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     const handleShadow = () => {
@@ -46,27 +48,27 @@ export default function Navbar({ navColor }) {
           <ul className='hidden md:flex'>
             <Link href='/#home' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
-                Home
+                {t('navbar.home')}
               </li>
             </Link>
             <Link href='/#about' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
-                About
+                {t('navbar.about')}
               </li>
             </Link>
             <Link href='/#skills' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
-                Skills
+                {t('navbar.skills')}
               </li>
             </Link>
             <Link href='/#projects' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
-                Projects
+                {t('navbar.projects')}
               </li>
             </Link>
             <Link href='/#contact' scroll={false}>
               <li className='ml-10 text-sm uppercase hover:border-b text-[#999999]'>
-                Contact
+                {t('navbar.contact')}
               </li>
             </Link>
           </ul>

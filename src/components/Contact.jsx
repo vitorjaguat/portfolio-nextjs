@@ -3,15 +3,18 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation('common');
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-20 w-full'>
         <p className='text-xl tracking-widest uppercase text-primary'>
-          Contact
+          {t('contact.title')}
         </p>
-        <h2 className='py-4'>Get In Touch</h2>
+        <h2 className='py-4'>{t('contact.subtitle')}</h2>
         <div className='grid lg:grid-cols-5 gap-8'>
           {/* left */}
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-gray-400 rounded-xl p-4'>
@@ -24,15 +27,12 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <h2 className='py-2'>Hugh Grec</h2>
-                <p>Front-End Developer</p>
-                <p className='py-4'>
-                  I am available for freelance or full-time positions. Contact
-                  me and let's talk.
-                </p>
+                <h2 className='py-2'>{t('contact.name')}</h2>
+                <p>{t('contact.position')}</p>
+                <p className='py-4'>{t('contact.text')}</p>
               </div>
               <div>
-                <p className='uppercase pt-8'>Connect With Me</p>
+                <p className='uppercase pt-8'>{t('contact.connect')}</p>
                 <div className='flex items-center justify-between py-4'>
                   <div className='rounded-full shadow-lg p-6 cursor-pointer hover:scale-110 ease-in duration-500'>
                     <FaLinkedinIn />
@@ -56,7 +56,9 @@ export default function Contact() {
               <form>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
+                    <label className='uppercase text-sm py-2'>
+                      {t('contact.label-name')}
+                    </label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
@@ -64,7 +66,7 @@ export default function Contact() {
                   </div>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>
-                      Phone Number
+                      {t('contact.label-phone')}
                     </label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
@@ -73,28 +75,34 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Email</label>
+                  <label className='uppercase text-sm py-2'>
+                    {t('contact.label-email')}
+                  </label>
                   <input
                     type='email'
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                   />
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Subject</label>
+                  <label className='uppercase text-sm py-2'>
+                    {t('contact.label-subject')}
+                  </label>
                   <input
                     type='text'
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                   />
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Message</label>
+                  <label className='uppercase text-sm py-2'>
+                    {t('contact.label-message')}
+                  </label>
                   <textarea
                     className='border-2 rounded-lg p-3 border-gray-300'
                     rows='10'
                   />
                 </div>
                 <button className='w-full p-4 text-gray-100 mt-4'>
-                  Send Message
+                  {t('contact.button')}
                 </button>
               </form>
             </div>

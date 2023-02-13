@@ -1,0 +1,46 @@
+{
+  "navbar": {
+    "home": "início",
+    "about": "sobre",
+    "skills": "habilidades",
+    "projects": "projetos",
+    "contact": "contato"
+  },
+  "home": {
+    "title": "vamos construir algo juntos",
+    "hi": "Olá, sou o ",
+    "name": "Hugh",
+    "subtitle": "Um Desenvolvedor Web Front-End",
+    "text": "Sou um desenvolvedor web especializado em construir (e também desenhar) experiências digitais de excelência. Atualmente, estou focado em construir aplicações-web responsivas, enquanto também aprendo sobre tecnologias de back-end."
+  },
+  "about": {
+    "small": "Eu não sou um desenvolvedor convencional",
+    "title": "sobre",
+    "subtitle": "Quem sou eu",
+    "p2": "Comecei o desenvolvimento web em 2013, gerenciando vários sites de comércio eletrônico em plataformas CMS, como WordPress, BigCommerce e Shopify. Tenho experiência em trabalhar diretamente com clientes e levar wireframes simulados até os aplicativos implantados. No meu tempo livre dirijo o Code Commerce, um canal no Youtube onde ensino desenvolvimento web e várias tecnologias de front-end.",
+    "p1": "Eu me especializei na criação de aplicativos de interface do usuário de front-end responsivos para dispositivos móveis que se conectam com APIs e outras tecnologias de back-end. Sou apaixonado por aprender novas tecnologias e entendo que há mais de uma maneira de realizar uma tarefa. Embora eu seja mais proficiente na criação de aplicativos front-end usando HTML, CSS, Javascript e React, aprendo rápido e posso adquirir novas pilhas de tecnologia conforme necessário. Acredito que ser um grande desenvolvedor não é usar uma linguagem específica, mas sim escolher a melhor ferramenta para o trabalho.",
+    "link": "Confira meus projetos mais recentes."
+  },
+  "skills": {
+    "title": "habilidades",
+    "subtitle": "Linguagens e Ferramentas"
+  },
+  "projects": {
+    "title": "projetos",
+    "subtitle": "O que já fiz"
+  },
+  "contact": {
+    "title": "contato",
+    "subtitle": "Entre em contato",
+    "name": "Hugh Grec",
+    "position": "Dev Front-End",
+    "text": "Estou disponível para freelance ou posições em full-time. Entre em contato comigo e vamos conversar.",
+    "connect": "CONECTE-SE COMIGO",
+    "label-name": "nome",
+    "label-phone": "celular",
+    "label-email": "e-mail",
+    "label-subject": "assunto",
+    "label-message": "mensagem",
+    "button": "enviar mensagem"
+  }
+}
