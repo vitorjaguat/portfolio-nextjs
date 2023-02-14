@@ -6,7 +6,11 @@ import { useTranslation } from 'next-i18next';
 import LanguageToggle from './LanguageToggle';
 
 export default function Main(props) {
-  const bgParallax = useParallax({ easing: 'easeIn', speed: 10 });
+  const bgParallax = useParallax({
+    easing: 'easeIn',
+    speed: 10,
+    // rootMargin: { bottom: 50, left: 0, right: 0, top: 700 },
+  });
   const { t } = useTranslation('common');
 
   return (

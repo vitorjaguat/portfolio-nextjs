@@ -1,0 +1,11 @@
+{
+  "crypto": {
+    "small": "Projeto",
+    "overview": "Descrição",
+    "text": "Eu construí este aplicativo para demonstrar conhecimento trabalhando em React JS e acessando endpoints de API. Este aplicativo foi construído usando React JS e está hospedado no Firebase. Este aplicativo oferece suporte à autenticação do usuário usando o Firebase. Os usuários podem criar uma nova conta usando seu endereço de e-mail e fazer login para salvar moedas em uma lista específica do usuário. Isso é possível criando um banco de dados de armazenamento em nuvem Firestore no momento do registro do usuário. Outra característica desta aplicação é o roteamento dinâmico com \"React Router DOM\". Este aplicativo foi construído usando a API Coin Gecko.",
+    "button-code": "CÓDIGO",
+    "button-demo": "DEMO",
+    "technologies": "Tecnologias",
+    "back": "Voltar"
+  }
+}

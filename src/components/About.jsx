@@ -26,7 +26,7 @@ export default function About() {
   return (
     <div id='about' className='w-full p-2 flex items-center py-20'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-5 gap-8'>
-        <div className='col-span-3'>
+        <div className='col-span-3 lg:pr-20'>
           <p className='uppercase text-xl tracking-widest text-primary'>
             {t('about.title')}
           </p>
