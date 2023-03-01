@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import propertyImg from '../../public/assets/projects/property.jpeg';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function property({ setNavColor }) {
   useEffect(() => {
@@ -84,4 +85,12 @@ export default function property({ setNavColor }) {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['projects', 'common'])), //have to add 'common' too, because of the navbar
+    },
+  };
 }

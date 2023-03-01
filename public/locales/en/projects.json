@@ -7,5 +7,32 @@
     "button-demo": "DEMO",
     "technologies": "Technologies",
     "back": "Back"
+  },
+  "property": {
+    "small": "Project",
+    "overview": "Overview",
+    "text": "This app was built using React JS and is hosted on Firebase. Users are able to search properties based on an Address, City, or ZIP code to retrieve a list of active properties currently for sale. You will be able to view property information as well as the specific location of the property integrated with the Google Maps API. User authentication is available so you can signup and signin to your account with an email address in order to save your favorite properties. This is made possible with Zillow API.",
+    "button-code": "CODE",
+    "button-demo": "DEMO",
+    "technologies": "Technologies",
+    "back": "Back"
+  },
+  "twitch": {
+    "small": "Project",
+    "overview": "Overview",
+    "text": "This appplication was built using NEXT.JS and is styled with Tailwind CSS. The application is hosted statically using Vercel. This is a mobile responsive recreation of Twitch.tv and features Next/Auth.js for authentication. Users may choose to be authenticated with either a Github account or a Google account. A few features to note with this project are lazy loading images using the Image component, built in routing, and Next/Auth Context.",
+    "button-code": "CODE",
+    "button-demo": "DEMO",
+    "technologies": "Technologies",
+    "back": "Back"
+  },
+  "netflix": {
+    "small": "Project",
+    "overview": "Overview",
+    "text": "I built this application in React JS and is hosted on GitHub pages. This app features user authentication with firebase as well as the firestore cloud storage database. This application is pulling movie data from an the IMDB movie API and displaying different categories. It features horizontal sliding and a featured selection. The useContext hook is also being implemented for app-wide state management.",
+    "button-code": "CODE",
+    "button-demo": "DEMO",
+    "technologies": "Technologies",
+    "back": "Back"
   }
 }

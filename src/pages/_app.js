@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Nunito } from '@next/font/google';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { appWithTranslation } from 'next-i18next';

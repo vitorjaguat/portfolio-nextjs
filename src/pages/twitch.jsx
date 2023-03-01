@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import twitchImg from '../../public/assets/projects/twitch.jpeg';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function twitch({ setNavColor }) {
   useEffect(() => {
@@ -83,4 +84,12 @@ export default function twitch({ setNavColor }) {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['projects', 'common'])), //have to add 'common' too, because of the navbar
+    },
+  };
 }

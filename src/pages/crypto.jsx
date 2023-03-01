@@ -39,7 +39,6 @@ export default function crypto({ setNavColor }) {
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>
-              {' '}
               {t('crypto.button-code')}
             </button>
           </a>
@@ -49,7 +48,6 @@ export default function crypto({ setNavColor }) {
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4'>
-              {' '}
               {t('crypto.button-demo')}
             </button>
           </a>
@@ -61,22 +59,22 @@ export default function crypto({ setNavColor }) {
             </p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> React JS
+                <RiRadioButtonFill size={12} className='pr-1' /> React JS
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Tailwind
+                <RiRadioButtonFill size={12} className='pr-1' /> Tailwind
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> JavaScript
+                <RiRadioButtonFill size={12} className='pr-1' /> JavaScript
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Firebase
+                <RiRadioButtonFill size={12} className='pr-1' /> Firebase
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Coin Gecko API
+                <RiRadioButtonFill size={12} className='pr-1' /> Coin Gecko API
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Routes
+                <RiRadioButtonFill size={12} className='pr-1' /> Routes
               </p>
             </div>
           </div>

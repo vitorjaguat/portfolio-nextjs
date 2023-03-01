@@ -7,5 +7,32 @@
     "button-demo": "DEMO",
     "technologies": "Tecnologias",
     "back": "Voltar"
+  },
+  "property": {
+    "small": "Projeto",
+    "overview": "Descrição",
+    "text": "Este aplicativo foi construído usando React JS e está hospedado no Firebase. Os usuários podem pesquisar propriedades com base em um endereço, cidade ou CEP para recuperar uma lista de propriedades ativas atualmente à venda. Você poderá visualizar as informações da propriedade, bem como a localização específica da propriedade integrada à API do Google Maps. A autenticação do usuário está disponível para que você possa se inscrever e entrar em sua conta com um endereço de e-mail para salvar suas propriedades favoritas. Isso é possível com a API do Zillow.",
+    "button-code": "CÓDIGO",
+    "button-demo": "DEMO",
+    "technologies": "Tecnologias",
+    "back": "Voltar"
+  },
+  "twitch": {
+    "small": "Projeto",
+    "overview": "Descrição",
+    "text": "Este aplicativo foi construído usando NEXT.JS e é estilizado com Tailwind CSS. O aplicativo é hospedado estaticamente usando Vercel. Esta é uma recriação responsiva móvel de Twitch.tv e apresenta Next/Auth.js para autenticação. Os usuários podem optar por ser autenticados com uma conta do Github ou uma conta do Google. Alguns recursos a serem observados com este projeto são imagens de carregamento lento usando o componente Image, roteamento integrado e Next/Auth Context.",
+    "button-code": "CÓDIGO",
+    "button-demo": "DEMO",
+    "technologies": "Tecnologias",
+    "back": "Voltar"
+  },
+  "netflix": {
+    "small": "Projeto",
+    "overview": "Descrição",
+    "text": "Eu construí este aplicativo em React JS e está hospedado nas páginas do GitHub. Este aplicativo apresenta autenticação de usuário com firebase, bem como o banco de dados de armazenamento em nuvem firestore. Este aplicativo extrai dados de filmes de uma API de filmes do IMDB e exibe diferentes categorias. Possui deslizamento horizontal e uma seleção em destaque. O gancho useContext também está sendo implementado para gerenciamento de estado em todo o aplicativo.",
+    "button-code": "CÓDIGO",
+    "button-demo": "DEMO",
+    "technologies": "Tecnologias",
+    "back": "Voltar"
   }
 }
